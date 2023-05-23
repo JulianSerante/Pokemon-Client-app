@@ -1,0 +1,37 @@
+.searchInput{
+    margin: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid green;
+    border-radius: 30px;
+    background-color: aquamarine;
+    color: darkgreen;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: large;
+}
+
+.searchButton{
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 6px;
+    padding-bottom: 8px;
+    background-color: green;
+    border: 2px solid chartreuse;
+    border-radius: 30px;
+    color: aquamarine;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+
+}
+
+.searchButton:hover{
+    cursor: pointer;
+    background-color: chartreuse;
+    border: 2px dotted green;
+    color: black;
+}
