@@ -14,7 +14,7 @@ function App() {
 
         <Route exact path='/' component={Landing} />
 
-        <Route path='/home' render={() => <Home/> } />
+        <Route path='/home' render={() => <Home /> } />
 
         <Route path='/detail/:id' render={() => <Detail/> } />
 

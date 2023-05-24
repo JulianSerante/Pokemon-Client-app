@@ -19,15 +19,15 @@ const Pagination = ({ currentPage, itemsPerPage, totalItems, onPageChange }) => 
     <nav>
       <ul className={style.ulPage}>
         <li>
-          <button onClick={handlePreviousPage} disabled={currentPage === 1}>
+          <button className={style.pageButton} onClick={handlePreviousPage} disabled={currentPage === 1}>
             Previous
           </button>
         </li>
         <li className="active">
-          {currentPage}
+          <h2 className={style.currentPage}>{currentPage}</h2>
         </li>
         <li>
-          <button onClick={handleNextPage} disabled={currentPage === totalPages}>
+          <button className={style.pageButton} onClick={handleNextPage} disabled={currentPage === totalPages}>
             Next
           </button>
         </li>

@@ -6,6 +6,7 @@ import Order from "../../components/Order/Order";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getPokemons, getPokemonByName, orderByABC } from '../../redux/actions';
+import style from './Home.module.css';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -16,10 +17,6 @@ const Home = () => {
   const itemsPerPage = 12;
   const currentOrder = useSelector(state => state.currentOrder);
 
-  useEffect(() => {
-    dispatch(getPokemons(actualPage, currentOrder));
-  }, []);
-
   const handleSearch = search => {
     setSearch(search);
     setActualPage(1);
@@ -28,8 +25,10 @@ const Home = () => {
   useEffect(() => {
     if (search) {
       dispatch(getPokemonByName(search));
+    } else {
+      dispatch(getPokemons(actualPage, currentOrder));
     }
-  }, [dispatch, search]);
+  }, [search]);
 
   const handlePageChange = pageNumber => {
     setActualPage(pageNumber);
@@ -47,7 +46,7 @@ const Home = () => {
 
   return (
     <div>
-      <div>
+      <div className={style.divSOF}>
         <SearchBar onSearch={handleSearch} />
         <Order currentOrder={currentOrder} handleOrderChange={handleOrderChange} />
         <Filter />

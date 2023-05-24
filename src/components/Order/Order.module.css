@@ -1,0 +1,44 @@
+.orderContainer{
+    padding: 5px;
+    background-color: rgba(68, 255, 0, 0.534);
+    border: 2px solid black;
+    border-radius: 14px;
+}
+
+.order{
+    background-color: greenyellow;
+    font-size: large;
+    font-style: italic;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.order:hover{
+    cursor: pointer;
+    background-color: rgb(251, 245, 70);
+    font-weight: bold;
+    font-style: normal;
+}
+
+.reset{
+    font-size: large;
+    font-weight: bold;
+    background-color: orangered;
+    color: rgb(208, 255, 138);
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid yellow;
+    border-radius: 10px;
+}
+.reset:hover{
+    cursor: pointer;
+    background-color: white;
+    color: orangered;
+    border: 2px solid black;
+    transition: 0.3s;
+    font-weight: bold;
+}

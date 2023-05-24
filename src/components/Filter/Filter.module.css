@@ -1,0 +1,24 @@
+.filter{
+    padding: 5px;
+    background-color: rgba(255, 255, 0, 0.534);
+    border: 2px solid black;
+    border-radius: 14px;
+}
+
+.filterSelect{
+        background-color: rgb(251, 245, 70);
+        font-size: large;
+        font-style: italic;
+        padding: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 20px;
+}
+
+.filterSelect:hover{
+    cursor: pointer;
+    background-color: greenyellow;
+    font-weight: bold;
+    font-style: normal;
+}

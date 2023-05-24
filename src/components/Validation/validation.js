@@ -66,6 +66,9 @@ const validation = (form) => {
             errors.height = 'La altura no puede superar los 5.000 metros';
         }
     }
+    if(form.typeIds.length === 0){
+        errors.types = 'Debes seleccionar al menos un tipo'
+    }
     
         return errors;
 }

@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { orderByABC, orderByAttack, reset } from '../../redux/actions';
+import style from './Order.module.css';
 
 const Order = ({ currentOrder, handleOrderChange }) => {
   const dispatch = useDispatch();
@@ -21,12 +22,13 @@ const Order = ({ currentOrder, handleOrderChange }) => {
   }
 
   return (
-    <div>
+    <div className={style.orderContainer}>
       <select
         name="orderABC"
         id=""
         onChange={handleOrderABC}
         value={currentOrder}
+        className={style.order}
       >
         <option value="DEFAULT">Ordenar alfabéticamente</option>
         <option value="A">Ascendente</option>
@@ -38,13 +40,14 @@ const Order = ({ currentOrder, handleOrderChange }) => {
         id=""
         onChange={handleOrderAttack}
         value={currentOrder}
+        className={style.order}
         >
         <option value="DEFAULT">Ordenar según ataque</option>
         <option value="A">Ascendente</option>
         <option value="D">Descendente</option>
       </select>
 
-      <button onClick={resetButton}>Reset</button>
+      <button onClick={resetButton} className={style.reset}>Reset 🔄</button>
     </div>
   );
 };

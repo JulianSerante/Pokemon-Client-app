@@ -16,9 +16,8 @@ const Filter = () => {
 
     return (
         <div className={style.filter}>
-            <span>Filtrar por tipo: </span>
-            <select name="type" id="" className={style.select} onChange={handleFilterType} defaultValue={'DEFAULT'}>
-                    <option value="allPokemons">All Pokemon</option>
+            <select name="type" id="" className={style.filterSelect} onChange={handleFilterType} defaultValue={'DEFAULT'}>
+                    <option value="allPokemons">Filtrar por tipo</option>
                     <option value="normal">Normal</option>
                     <option value="fighting">Fighting</option>
                     <option value="flying">Flying</option>
@@ -41,9 +40,8 @@ const Filter = () => {
                     <option value="shadow">Shadow</option>
                 </select>
 
-                <span>Filtrar por origen: </span>
-                <select name="type" id="" className={style.select} onChange={handleFilterOrigin} defaultValue={'DEFAULT'}>
-                    <option value="allPokemons">All Pokemon</option>
+                <select name="type" id="" className={style.filterSelect} onChange={handleFilterOrigin} defaultValue={'DEFAULT'}>
+                    <option value="allPokemons">Filtrar por origen de creación</option>
                     <option value="true">Pokemons creados por el usuario</option>
                     <option value="false">Pokemons pre-existentes</option>
                 </select>
