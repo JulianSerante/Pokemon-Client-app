@@ -1,13 +1,36 @@
 .detailContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
     background-image: url('https://wallpapercave.com/wp/wp8813120.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
-    border: 10px solid rgb(225, 0, 0);
-    border-radius: 20%;
-    margin: 10px;
+    margin: 10px 10%;
     padding: 20px;
+    border: 5px solid rgb(225, 0, 0);
+    border-radius: 10%;
+}
+
+.container1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 40px;
+}
+
+.container2{
+    border: 3px solid darkblue;
+}
+
+.container3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin-left: 20px;
 }
 
 .detailName{
@@ -20,12 +43,12 @@
 }
 
 .detailImg{
-    width: 500px;
+    width: 400px;
 }
 
 .detailImg:hover{
     cursor: zoom-in;
-    width: 800px;
+    width: 500px;
     transition: 0.5s;
 }
 

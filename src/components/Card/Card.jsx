@@ -9,23 +9,22 @@ const Card = ({ id, name, image, types }) => {
     if (!name) {
       alert('No hay un Pokemon con ese nombre');
     }
-  }, []);
+  }, [name]);
 
   return (
     <div className={style.card}>
       <NavLink to={`/detail/${id}`} className={style.cardLink} >
         <div>
-        <h1>{upperName}</h1>
-      
-      <img className={style.image} src={image} alt="" />
-      {types && types.length > 0 && (
-        <ul>
-          {types.map((type, index) => (
-            <li key={index}>{type.name.toUpperCase()}</li>
-          ))}
-        </ul>
-      )}
-      </div>
+          <h1>{upperName}</h1>
+          <img className={style.image} src={image} alt="" />
+          {types?.length > 0 && (
+            <ul>
+              {types.map((type, index) => (
+                <li key={index}>{type.name.toUpperCase()}</li>
+              ))}
+            </ul>
+          )}
+        </div>
       </NavLink>
     </div>
   );

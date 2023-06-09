@@ -1,7 +1,7 @@
 .navBarContainer{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     background-image: url('https://wallpaperaccess.com/full/3175103.jpg');
     background-repeat: no-repeat;
     background-position: center;

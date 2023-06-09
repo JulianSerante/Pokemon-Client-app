@@ -1,7 +1,7 @@
 import { useState } from "react";
 import style from './SearchBar.module.css';
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ handleSearch }) => {
     const [search, setSearch] = useState("");
 
 
@@ -11,7 +11,7 @@ const SearchBar = ({ onSearch }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        onSearch(search);
+        handleSearch(search);
     }
 
     return (

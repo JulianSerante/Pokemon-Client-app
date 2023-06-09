@@ -72,8 +72,12 @@ const Form = () => {
       };
     
       axios.post('http://localhost:3001/pokemons', requestBody)
+      
         .then(res => alert(res.data))
-        .catch(error => alert(error));
+        .catch(error => {
+          console.log(error)
+          alert(error)
+        });
     };
     
 
@@ -123,6 +127,7 @@ const Form = () => {
             </div>
             <span className={style.formLabel}>Selecciona el/los tipos que tendrá el nuevo Pokemon:</span>
             {errors.types && <span className={style.errors}>{errors.types}</span>}
+
             {types.map(type => (
                 <div key={type.id} className={style.formCheck}>
                 <label >

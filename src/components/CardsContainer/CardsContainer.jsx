@@ -1,7 +1,6 @@
 import style from './CardsContainer.module.css';
 import Card from '../Card/Card';
 
-
 const CardsContainer = ({pokemons}) => {
 
     return(

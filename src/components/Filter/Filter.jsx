@@ -40,7 +40,7 @@ const Filter = () => {
                     <option value="shadow">Shadow</option>
                 </select>
 
-                <select name="type" id="" className={style.filterSelect} onChange={handleFilterOrigin} defaultValue={'DEFAULT'}>
+                <select name="origin" id="" className={style.filterSelect} onChange={handleFilterOrigin} defaultValue={'DEFAULT'}>
                     <option value="allPokemons">Filtrar por origen de creación</option>
                     <option value="true">Pokemons creados por el usuario</option>
                     <option value="false">Pokemons pre-existentes</option>

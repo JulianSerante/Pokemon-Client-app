@@ -5,7 +5,7 @@ import Filter from '../../components/Filter/Filter';
 import Order from "../../components/Order/Order";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getPokemons, getPokemonByName, orderByABC } from '../../redux/actions';
+import { getPokemons, getPokemonByName } from '../../redux/actions';
 import style from './Home.module.css';
 
 const Home = () => {
@@ -17,7 +17,7 @@ const Home = () => {
   const itemsPerPage = 12;
   const currentOrder = useSelector(state => state.currentOrder);
 
-  const handleSearch = search => {
+  const handleSearch = (search) => {
     setSearch(search);
     setActualPage(1);
   };
@@ -30,12 +30,8 @@ const Home = () => {
     }
   }, [search]);
 
-  const handlePageChange = pageNumber => {
+  const handlePageChange = (pageNumber) => {
     setActualPage(pageNumber);
-  };
-
-  const handleOrderChange = orderABC => {
-    dispatch(orderByABC(orderABC));
   };
 
   const displayedPokemon = search ? pokemonByName : allPokemons;
@@ -47,8 +43,8 @@ const Home = () => {
   return (
     <div>
       <div className={style.divSOF}>
-        <SearchBar onSearch={handleSearch} />
-        <Order currentOrder={currentOrder} handleOrderChange={handleOrderChange} />
+        <SearchBar handleSearch={handleSearch} />
+        <Order currentOrder={currentOrder} />
         <Filter />
       </div>
       <CardsContainer pokemons={showPokemon} />

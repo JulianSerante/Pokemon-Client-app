@@ -1,7 +1,7 @@
 import style from './Pagination.module.css';
 
 const Pagination = ({ currentPage, itemsPerPage, totalItems, onPageChange }) => {
-  const totalPages = Math.ceil(totalItems / itemsPerPage);
+  const totalPages = Math.floor(totalItems / itemsPerPage);
 
   const handlePreviousPage = () => {
     if (currentPage > 1) {

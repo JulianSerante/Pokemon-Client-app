@@ -1,4 +1,4 @@
-import { FILTER_BY_ORIGIN, FILTER_BY_TYPE, GET_POKEMONS, GET_POKEMON_ID, GET_POKEMON_NAME, ORDER_ABC, ORDER_ATTACK, RESET } from "./action_types";
+import { CLEAN_DETAIL, FILTER_BY_ORIGIN, FILTER_BY_TYPE, GET_POKEMONS, GET_POKEMON_ID, GET_POKEMON_NAME, ORDER_ABC, ORDER_ATTACK, RESET } from "./action_types";
 
 const initialState = {
   allPokemons: [],
@@ -21,6 +21,8 @@ const reducer = (state = initialState, action) => {
       };
     case GET_POKEMON_ID:
       return { ...state, pokemonDetail: action.payload };
+    case CLEAN_DETAIL:
+      return { ...state, pokemonDetail: {} }
     case GET_POKEMON_NAME:
       return { ...state, pokemonByName: action.payload };
     case FILTER_BY_TYPE:

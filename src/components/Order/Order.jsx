@@ -2,18 +2,16 @@ import { useDispatch } from "react-redux";
 import { orderByABC, orderByAttack, reset } from '../../redux/actions';
 import style from './Order.module.css';
 
-const Order = ({ currentOrder, handleOrderChange }) => {
+const Order = ({ currentOrder }) => {
   const dispatch = useDispatch();
 
   const handleOrderABC = (event) => {
     const orderABC = event.target.value;
-    handleOrderChange(orderABC);
     dispatch(orderByABC(orderABC));
   };
 
   const handleOrderAttack = (event) => {
     const orderAttack = event.target.value;
-    handleOrderChange(orderAttack);
     dispatch(orderByAttack(orderAttack));
   }
 
